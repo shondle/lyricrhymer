@@ -1,0 +1,188 @@
+.lyric-rhymer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input-section,
+.output-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.input-section h2,
+.output-section h2 {
+  color: #333;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.lyrics-input {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  font-size: 1rem;
+  line-height: 1.6;
+  resize: vertical;
+  min-height: 200px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.lyrics-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.process-btn,
+.clear-btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.process-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  flex: 1;
+}
+
+.process-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.process-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.clear-btn {
+  background: #f8f9fa;
+  color: #6c757d;
+  border: 1px solid #dee2e6;
+}
+
+.clear-btn:hover {
+  background: #e9ecef;
+  transform: translateY(-1px);
+}
+
+.error-message {
+  background: #f8d7da;
+  color: #721c24;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  border: 1px solid #f5c6cb;
+}
+
+.output-container {
+  min-height: 200px;
+  border: 2px solid #e1e5e9;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #fafbfc;
+}
+
+.highlighted-lyrics {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.placeholder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  color: #6c757d;
+  text-align: center;
+}
+
+.placeholder p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+/* Rhyme group colors */
+.rhyme-group-1 {
+  background: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.rhyme-group-2 {
+  background: linear-gradient(120deg, #a8edea 0%, #fed6e3 100%);
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.rhyme-group-3 {
+  background: linear-gradient(120deg, #d299c2 0%, #fef9d7 100%);
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.rhyme-group-4 {
+  background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+  color: #333;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .lyric-rhymer {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .input-section,
+  .output-section {
+    padding: 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+  
+  .App-header h1 {
+    font-size: 2rem;
+  }
+  
+  .App-header p {
+    font-size: 1rem;
+  }
+}
